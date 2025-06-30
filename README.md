@@ -1,0 +1,1 @@
+Este proyecto corresponde al trabajo final de la materia Desarrollo y Arquitecturas Web de la Universidad Abierta Interamericana | Año 2025
