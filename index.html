@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper - Buscaminas</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Minesweeper</h1>
+        <nav>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="game-info">
+            <div class="contador-minas">
+                <span>Minas: </span>
+                <span id="minas-restantes">10</span>
+            </div>
+            
+            <button id="btn-reiniciar" class="btn-reiniciar">
+                🙂
+            </button>
+            
+            <div class="temporizador">
+                <span>Tiempo: </span>
+                <span id="tiempo">000</span>
+            </div>
+        </section>
+
+        <section id="tablero-container" class="tablero-container">
+            <!-- TODO: tablero dinámico con js -->
+        </section>
+    </main>
+
+    <script src="js/utils.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
