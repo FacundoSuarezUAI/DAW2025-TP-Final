@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Minesweeper</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Contacto</h1>
+        <nav>
+            <a href="index.html">Volver al Juego</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contacto-container">
+            <h2>Mandanos tu mensaje</h2>
+            
+            <form id="form-contacto" class="form-contacto">
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <span class="error" id="error-nombre"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" required>
+                    <span class="error" id="error-email"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    <span class="error" id="error-mensaje"></span>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar</button>
+            </form>
+        </section>
+
+        <section class="info-adicional">
+            <h3>Información del Proyecto</h3>
+            <p>Este proyecto fue desarrollado como trabajo final para la materia Desarrollo y Arquitecturas Web 2025 de la Universidad Abierta Interamericana, Rosario.</p>
+            <p>
+                <strong>Código fuente:</strong> 
+                <a href="https://github.com/FacundoSuarezUAI/DAW2025-TP-Final" target="_blank" rel="noopener noreferrer">
+                    Ver en GitHub
+                </a>
+            </p>
+        </section>
+    </main>
+
+    <script src="js/utils.js"></script>
+    <script src="js/ui.js"></script>
+</body>
+</html>
