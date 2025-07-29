@@ -7,7 +7,6 @@ var btnReiniciar;
 var tableroContainer;
 
 // funciones de inicio y actualizacion UI
-
 function inicializarElementosDOM() {
     contadorMinas = document.getElementById('minas-restantes');
     temporizador = document.getElementById('tiempo');
@@ -96,7 +95,7 @@ function pedirNombreJugador(callback) {
 
     function confirmarNombre() {
         var nombre = inputNombre.value.trim();
-        if (!validarNombre(nombre)) {
+        if (!validarNombreJugador(nombre)) { 
             errorNombre.textContent = 'El nombre debe tener al menos 3 letras';
             return;
         }
@@ -113,14 +112,20 @@ function pedirNombreJugador(callback) {
     });
 }
 
-
-// logica form contacto
-
-function validarNombre(nombre) {
+function validarNombreJugador(nombre) {
     return nombre && nombre.trim().length >= 3;
 }
 
+// logica form contacto
+
+function validarNombreContacto(nombre) {
+    if (!nombre || nombre.trim().length === 0) return false;
+    const regex = /^[a-zA-ZñÑ0-9\s]+$/;
+    return regex.test(nombre);
+}
+
 function validarEmail(email) {
+    if (!email) return false;
     var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
 }
@@ -131,7 +136,7 @@ function validarMensaje(mensaje) {
 
 document.addEventListener('DOMContentLoaded', function () {
     var form = document.getElementById('form-contacto');
-    if (!form) return; // solo para contacto.html
+    if (!form) return;
 
     form.addEventListener('submit', function (e) {
         e.preventDefault();
@@ -150,8 +155,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         var esValido = true;
 
-        if (!validarNombre(nombreInput.value)) {
-            errorNombre.textContent = 'El nombre debe tener por lo menos 3 caracteres.';
+        if (!validarNombreContacto(nombreInput.value)) {
+            errorNombre.textContent = 'El nombre solo puede contener letras, ñ, espacios y números.';
             esValido = false;
         }
 

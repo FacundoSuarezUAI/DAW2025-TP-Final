@@ -2,7 +2,7 @@
 
 Recreación del clásico juego Buscaminas, desarrollado como proyecto final para la materia "Desarrollo y Arquitecturas Web" de la UAI (2025).
 
-Link: https://facundosuarezuai.github.io/DAW2025-TP-Final/
+[![Github Pages](https://img.shields.io/badge/Demo-en_Vivo-brightgreen?style=for-the-badge&logo=github)](https://facundosuarezuai.github.io/DAW2025-TP-Final/)
 
 <br>
 
